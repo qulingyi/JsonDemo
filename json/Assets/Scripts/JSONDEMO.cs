@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 
 public class JSONDEMO : MonoBehaviour {
-   // public GameObject myObject;
+   public GameObject myObject;
     //private int size;
     string path;
     string jsonString;
@@ -25,6 +25,9 @@ public class JSONDEMO : MonoBehaviour {
         //}
         foreach (properties item in data.objects)
         {
+            string path = item.model.obj;
+            OBJ obj = myObject.AddComponent<OBJ>();
+            StartCoroutine(obj.Load(path));
             Debug.Log(item.model.name);
         }
     }

@@ -285,13 +285,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\OBJImport\OBJLoader.cs" />
-    <Compile Include="Assets\OBJImport\TextureLoader.cs" />
+    <Compile Include="Assets\OBJ\src\FaceIndices.cs" />
+    <Compile Include="Assets\OBJ\src\GeometryBuffer.cs" />
+    <Compile Include="Assets\OBJ\src\OBJ.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\JSONDEMO.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\OBJImport\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
