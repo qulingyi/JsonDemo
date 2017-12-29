@@ -1,0 +1,98 @@
+{
+  "panoImg": "https://www.vryourbiz.com/api/data/view/4c561b110a005000/Master Bedroom.jpg",
+  "cameraPosition": [ 0, 0, 1.498, 0 ],
+  "wallHeight": 3.0097486063920442,
+  "wallCorners": [
+    [ 3.798194327262089, 1.3930478669969362, 3.0097486063920442 ],
+    [ -0.35745067744717834, -2.2087445950564577, 3.0097486063920442 ],
+    [ -4.297103198771199, 2.468724886424188, 3.0097486063920442 ],
+    [ -0.14986312549757697, 6.011024790536123, 3.0097486063920442 ]
+  ],
+  "objects": [
+    {
+      "w": "0.533",
+      "d": "0.432",
+      "h": "0.524",
+      "position": [ -0.7699131208362608, -1.2869159585453347, 0.2619999999991931 ],
+      "rotate": -4.0068309454489714,
+      "model": {
+        "name": "oak",
+        "obj": "https://www.vryourbiz.com/obj/cabinet/model.obj",
+        "mtl": "oak.mtl"
+      }
+    },
+    {
+      "w": "0.533",
+      "d": "0.432",
+      "h": "0.524",
+      "position": [ -1.1610104108155324, -0.8351874964482134, 0.2620000000001992 ],
+      "rotate": 2.273286085930283,
+      "model": {
+        "name": "maple",
+        "obj": "https://www.vryourbiz.com/obj/cabinet/model.obj",
+        "mtl": "maple.mtl"
+      }
+    },
+    {
+      "w": "0.505",
+      "d": "0.560",
+      "h": "1.050",
+      "position": [ -2.426931171180051, 0.6551072584040014, 0.5250000000002072 ],
+      "rotate": -0.9525843014380101,
+      "model": {
+        "name": "oak",
+        "obj": "https://www.vryourbiz.com/obj/chair/model.obj",
+        "mtl": "oak.mtl"
+      }
+    },
+    {
+      "w": "0.505",
+      "d": "0.560",
+      "h": "1.050",
+      "position": [ -1.8353410926447509, -0.1761876957656927, 0.5250000000000051 ],
+      "rotate": -0.8422708312357731,
+      "model": {
+        "name": "customized",
+        "obj": "https://www.vryourbiz.com/obj/chair/model.obj",
+        "mtl": "customized.mtl"
+      }
+    },
+    {
+      "w": "0.533",
+      "d": "0.432",
+      "h": "0.524",
+      "position": [ -0.726333317054287, -0.44606954968816037, 0.26199999999999024 ],
+      "rotate": 2.2601442700045196,
+      "model": {
+        "name": "pine",
+        "obj": "https://www.vryourbiz.com/obj/cabinet/model.obj",
+        "mtl": "pine.mtl"
+      }
+    },
+    {
+      "w": "0.533",
+      "d": "0.432",
+      "h": "0.524",
+      "position": [ -0.3307397378226604, -0.9631596255953307, 0.262 ],
+      "rotate": 2.2960039950915045,
+      "model": {
+        "name": "pine",
+        "obj": "https://www.vryourbiz.com/obj/cabinet/model.obj",
+        "mtl": "pine.mtl"
+      }
+    },
+    {
+      "w": "0.505",
+      "d": "0.560",
+      "h": "1.050",
+      "position": [ -3.072211007685837, 2.0832837495343255, 0.525 ],
+      "rotate": 0,
+      "model": {
+        "name": "customized",
+        "obj": "https://www.vryourbiz.com/obj/chair/model.obj",
+        "mtl": "customized.mtl"
+      }
+    }
+  ]
+}
+
