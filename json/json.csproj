@@ -289,7 +289,10 @@
     <Compile Include="Assets\OBJ\src\GeometryBuffer.cs" />
     <Compile Include="Assets\OBJ\src\OBJ.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\GameObjectSpwan.cs" />
     <Compile Include="Assets\Scripts\JSONDEMO.cs" />
+    <Compile Include="Assets\Scripts\RequestParameters.cs" />
+    <Compile Include="Assets\Scripts\URL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
