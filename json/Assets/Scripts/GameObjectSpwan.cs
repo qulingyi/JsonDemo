@@ -9,11 +9,12 @@ public class GameObjectSpawn : MonoBehaviour
     void Start()
     {
         //spawn object
-        objToSpawn = new GameObject("cool");
+        objToSpawn = new GameObject();
         //Add Components
         objToSpawn.AddComponent<Rigidbody>();
+        objToSpawn.AddComponent<MeshCollider>();
         objToSpawn.AddComponent<MeshFilter>();
-        objToSpawn.AddComponent<BoxCollider>();
+       // objToSpawn.AddComponent<BoxCollider>();
         objToSpawn.AddComponent<MeshRenderer>();
     }
 }

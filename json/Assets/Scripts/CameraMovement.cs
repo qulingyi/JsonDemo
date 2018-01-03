@@ -3,19 +3,19 @@ using System.Collections;
 
 public class CameraMovement : MonoBehaviour
 {
-  //Variables 
+    //Variables 
     private Vector3 mouseOrigin;    // Position of cursor when mouse dragging starts
     private bool isRotating;    // Is the camera being rotated
     //private bool isMoving;     // Is the camera being moved
     public float turnSpeed = 4.0f;      // Speed of camera turning when mouse moves in along an axis
     public float speed = 10.0f; //Speed of camera moving when mouse left click holding 
-   
-     
 
-void Start()
-    { 
+
+
+    void Start()
+    {
         mouseOrigin = transform.position;
-       
+
     }
 
     void Update()
@@ -72,18 +72,22 @@ void Start()
         //    }
         //}
 
-       
-        if(Input.GetAxis("Mouse ScrollWheel")>0)
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y - .2f,
-                                            transform.position.z + .2f);
+            GetComponent<Transform>().position = new Vector3(transform.position.x - .02f, transform.position.y ,
+                                            transform.position.z + .06f);
+
+            transform.Rotate(2, 0, 0);
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y + .2f,
-                                            transform.position.z - 2f);
+            GetComponent<Transform>().position = new Vector3(transform.position.x + .02f, transform.position.y ,
+                                            transform.position.z - .06f);
+
+            transform.Rotate(2, 0, 0);
+
         }
 
     }
-
- }
+}

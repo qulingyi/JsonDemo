@@ -40,7 +40,7 @@ public class OBJ : MonoBehaviour {
 	}
 	
 	public IEnumerator Load(string path) {
-		basepath = (path.IndexOf("/") == -1) ? "" : path.Substring(0, path.LastIndexOf("/") + 1);
+        basepath = (path.IndexOf("/") == -1) ? "" : path.Substring(0, path.LastIndexOf("/") + 1);
 		
 		WWW loader = new WWW(path);
 		yield return loader;
@@ -220,16 +220,18 @@ public class OBJ : MonoBehaviour {
 		GameObject[] ms = new GameObject[buffer.numObjects];
 		
 		if(buffer.numObjects == 1) {
-			gameObject.AddComponent(typeof(MeshFilter));
+			//gameObject.AddComponent(typeof(MeshFilter));
 			gameObject.AddComponent(typeof(MeshRenderer));
-			ms[0] = gameObject;
+           // gameObject.AddComponent(typeof(MeshCollider));
+            ms[0] = gameObject;
 		} else if(buffer.numObjects > 1) {
 			for(int i = 0; i < buffer.numObjects; i++) {
 				GameObject go = new GameObject();
 				go.transform.parent = gameObject.transform;
-				go.AddComponent(typeof(MeshFilter));
+				//go.AddComponent(typeof(MeshFilter));
 				go.AddComponent(typeof(MeshRenderer));
-				ms[i] = go;
+               // gameObject.AddComponent(typeof(MeshCollider));
+                ms[i] = go;
 			}
 		}
 		

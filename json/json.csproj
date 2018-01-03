@@ -285,6 +285,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DimBoxes\BoundBox\BoundBox.cs" />
+    <Compile Include="Assets\DimBoxes\BoundBox\DrawLines.cs" />
+    <Compile Include="Assets\DimBoxes\BoundBox\maxCamera.cs" />
+    <Compile Include="Assets\DimBoxes\BoundBox\TestDynamicBehaviour.cs" />
     <Compile Include="Assets\OBJ\src\FaceIndices.cs" />
     <Compile Include="Assets\OBJ\src\GeometryBuffer.cs" />
     <Compile Include="Assets\OBJ\src\OBJ.cs" />
