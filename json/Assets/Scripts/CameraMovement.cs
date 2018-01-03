@@ -75,18 +75,17 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            GetComponent<Transform>().position = new Vector3(transform.position.x - .02f, transform.position.y ,
-                                            transform.position.z + .06f);
-
-            transform.Rotate(2, 0, 0);
+            //GetComponent<Transform>().position = new Vector3(transform.position.x - .02f, transform.position.y ,
+            //                                transform.position.z + .06f);
+            //transform.Rotate(2, 0, 0);
+            GetComponent<Camera>().fieldOfView--;
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            GetComponent<Transform>().position = new Vector3(transform.position.x + .02f, transform.position.y ,
-                                            transform.position.z - .06f);
-
-            transform.Rotate(2, 0, 0);
-
+            //GetComponent<Transform>().position = new Vector3(transform.position.x + .02f, transform.position.y ,
+            //                                transform.position.z - .06f);
+            //transform.Rotate(2, 0, 0);
+            GetComponent<Camera>().fieldOfView++;
         }
 
     }

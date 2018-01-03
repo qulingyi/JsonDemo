@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using DimBoxes;
+
+
 
 public class JSONDEMO : MonoBehaviour {
      public GameObject myCam;
     //private int size;
     string path;
     string jsonString;
+    //public MonoBehaviour selectedScript;
     // Use this for initialization
     void Start()
     {
@@ -23,10 +27,26 @@ public class JSONDEMO : MonoBehaviour {
             string path = item.model.obj;
             OBJ obj = myObject.AddComponent<OBJ>();
             StartCoroutine(obj.Load(path));
+            myObject.AddComponent<Collider>();
             myObject.transform.position = new Vector3(item.position[0], item.position[1], item.position[2]);  
-            myObject.transform.localScale = new Vector3(item.w*0.02f, item.d * 0.02f, item.h * 0.02f);
+            //myObject.transform.localScale = new Vector3(item.w, item.d, item.h);
             myObject.transform.Rotate(0, 0, 0);
             myObject.AddComponent<MeshFilter>();
+            //myObject.AddComponent<BoundBox>();
+            //myObject.AddComponent<MeshRenderer>()
+            //BoxCollider boxCollider = myObject.AddComponent<BoxCollider>();
+           
+            //MeshRenderer renderer = myObject.GetComponent<MeshRenderer>();
+            //boxCollider.center = renderer.bounds.center;
+            //boxCollider.size = renderer.bounds.size;
+
+
+
+
+            //string test = "BoundBox";
+            //myObject.AddComponent <test>();
+
+
             //myObject.AddComponent<BoundBox.cs>();
             //myObject.AddComponent<MeshCollider>();
             //myObject.AddComponent<MeshRenderer>();
@@ -34,17 +54,29 @@ public class JSONDEMO : MonoBehaviour {
             //myObject.GetComponent<MeshCollider>().sharedMesh  = mesh;
             //MeshCollider meric = GetComponent<MeshCollider>();
             //Bounds bounds = myObject.GetComponent<MeshFilter>().mesh.bounds;
-            Vector3 x = myObject.GetComponent<MeshFilter>().mesh.bounds.size;
-            Debug.Log(x);
-            
+            //myObject.AddComponent<MeshFilter>();
+            //Mesh x = myObject.GetComponent<MeshFilter>().mesh;
+            //Bounds y = x.bounds;
+            //Vector3 z = y.size;
+            //Debug.Log("hello" + z.x);
+            //float xRatio = item.w /cam.wallHeight;
+            //float yRatio = item.d / cam.wallHeight;
+            //float zRatio = item.h / cam.wallHeight;
+            //myObject.transform.localScale = new Vector3(myObject.transform.lossyScale.x * xRatio, myObject.transform.lossyScale.y * yRatio, myObject.transform.lossyScale.z * zRatio);
+            //Debug.Log(myObject.transform.TransformVector(myObject.transform.localScale));
         }
     }
+    void Update()
+    {
+        //myObject.GetComponent<MeshFilter>().mesh.bounds.size.x;
 
+    }
     // Update is called once per frame
     [System.Serializable]
     public class camData 
     {
         public float[] cameraPosition;
+        public float wallHeight;
     } //camera data class
     [System.Serializable]
     public class propertyData
