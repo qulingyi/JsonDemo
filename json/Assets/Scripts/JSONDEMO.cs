@@ -11,6 +11,7 @@ public class JSONDEMO : MonoBehaviour {
     //private int size;
     string path;
     string jsonString;
+    bool change = false;
     //public MonoBehaviour selectedScript;
     // Use this for initialization
     void Start()
@@ -23,19 +24,31 @@ public class JSONDEMO : MonoBehaviour {
         //myCam.transform.Rotate(0, 90, 0);
         foreach (properties item in data.objects)//for every single model in the object list, do this
         {
+            
             GameObject myObject = new GameObject();//initializes a new gameobject
             string path = item.model.obj;
             OBJ obj = myObject.AddComponent<OBJ>();
             StartCoroutine(obj.Load(path));
-            myObject.AddComponent<Collider>();
+            //if (change == true)
+            //{
+            //    myObject.AddComponent<Collider>();
+            //}
             myObject.transform.position = new Vector3(item.position[0], item.position[1], item.position[2]);  
             //myObject.transform.localScale = new Vector3(item.w, item.d, item.h);
             myObject.transform.Rotate(0, 0, 0);
-            myObject.AddComponent<MeshFilter>();
-            //myObject.AddComponent<BoundBox>();
+            //myObject.AddComponent<BoxCollider>();
+            //myObject.AddComponent<MeshFilter>();
+           // myObject.AddComponent<BoundBox>();
+            Debug.Log(obj.GetComponent<MeshFilter>().mesh.bounds.size.x);
+
+
+            //if (change == true)
+            //{
+            //    myObject.AddComponent<Collider>();
+            //}
             //myObject.AddComponent<MeshRenderer>()
             //BoxCollider boxCollider = myObject.AddComponent<BoxCollider>();
-           
+
             //MeshRenderer renderer = myObject.GetComponent<MeshRenderer>();
             //boxCollider.center = renderer.bounds.center;
             //boxCollider.size = renderer.bounds.size;
@@ -69,7 +82,7 @@ public class JSONDEMO : MonoBehaviour {
     void Update()
     {
         //myObject.GetComponent<MeshFilter>().mesh.bounds.size.x;
-
+        change = true;
     }
     // Update is called once per frame
     [System.Serializable]

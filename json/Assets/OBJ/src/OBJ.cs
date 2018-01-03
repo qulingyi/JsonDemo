@@ -220,17 +220,20 @@ public class OBJ : MonoBehaviour {
 		GameObject[] ms = new GameObject[buffer.numObjects];
 		
 		if(buffer.numObjects == 1) {
-			gameObject.AddComponent(typeof(MeshFilter));
+           
+            gameObject.AddComponent(typeof(MeshFilter));
 			gameObject.AddComponent(typeof(MeshRenderer));
-           gameObject.AddComponent(typeof(BoxCollider));
+            gameObject.AddComponent(typeof(Bounds));
+            gameObject.AddComponent(typeof(BoxCollider));
             ms[0] = gameObject;
-		} else if(buffer.numObjects > 1) {
+        } else if(buffer.numObjects > 1) {
 			for(int i = 0; i < buffer.numObjects; i++) {
 				GameObject go = new GameObject();
 				go.transform.parent = gameObject.transform;
 				go.AddComponent(typeof(MeshFilter));
 				go.AddComponent(typeof(MeshRenderer));
-               gameObject.AddComponent(typeof(BoxCollider));
+                gameObject.AddComponent(typeof(Bounds));
+                gameObject.AddComponent(typeof(BoxCollider));
                 ms[i] = go;
 			}
 		}
